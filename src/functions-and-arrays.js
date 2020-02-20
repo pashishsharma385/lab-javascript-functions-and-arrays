@@ -1,17 +1,102 @@
 // Progression #1: Greatest of the two numbers
+greatest_of_two_number(p1,p2)
+{if(p1>p2){
+  return(p1);
+}else
+{
+  return(p2);
+}
+}
+console.log(greatest_of_two_number(10,12))
 
 // Progression #2: The lengthy word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+const alpha = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+function findScaryWord(words){
+  var c = 0;
+  for(var i =0;i<words.length;i++){
+    var z = words[i].length;
+    if(z>c){
+    var j =words[i];
+      c=z
+    }
+  }console.log(c);console.log(j);
+}
+console.log(findScaryWord(alpha))
 
 // Progression #3: Net Price
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-
+function netprice(words){
+  var c = 0;
+  for(var i =0;i<words.length;i++){
+  c = c+words[i];
+  }
+  console.log(c)
+}
+console.log(netprice(numbers));
+//progression #3.1(bonus):
+const mixedArr = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
+function add_multiple(words)
+{
+  var c = 0;
+  for(var i = 0;i<words.length;i++)
+  {
+    if(typeof words[i]=="number")
+    {
+    c = c+words[i];
+    }
+    if(typeof words[i]=="string")
+    {
+    c=c+words[i].length;
+    }
+    if(typeof words[i]=="boolean")
+    { if(words[i]==true)
+         {c+=1;
+         }
+         else
+         {
+         c+=0;
+         }
+    }
+  }
+  console.log(c);
+}
+console.log(add_multiple(ac))
 // Progression #4: Calculate the average
+
+const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function netprice(words){
+  var c = 0;
+  for(var i =0;i<words.length;i++){
+  c = c+words[i];
+  }
+  console.log(c/words.length)
+}
+console.log(netprice(numbers))
+
 // Progression 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function midPointOfLevels(words){
+  var c = 0;
+  for(var i =0;i<words.length;i++){
+  c = c+words[i];
+  }
+  console.log(c/words.length)
+}
+console.log(midPointOfLevels(numbers))
+
 
 // Progression 4.2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength(words){
+c = 0;
+for(var i  = 0;i<words.length;i++)
+  {
+    c=c+words[i].length;
+    
+  }console.log(c/words.length)
+}
+console.log(wordsArr)
+
 
 // Progression #5: Unique arrays
 const wordsUnique = [
@@ -28,10 +113,25 @@ const wordsUnique = [
   'egg',
   'flour'
 ];
+function uniqueArray(words){
+const unis = (value, index, self) => {
+  return self.indexOf(value) === index
+}
+
+const uniqueAger = words.filter(unis)
+
+console.log(uniqueAger)
+}
+
 
 // Progression #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
-
+function searchElement(words,ser){
+var x = words.includes(ser);
+console.log(x);
+}
+gf = "machine";
+console.log(searchElement(wordsFind,gf));
 // Progression #7: Count repetition
 const wordsCount = [
   'machine',
@@ -46,7 +146,15 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
-
+function howManyTimesElementRepeated(words,ser){
+var c = 0;
+  for(var i=0;i<words.length;i++)
+  {if(words[i]==ser)
+  {c+=1
+  }
+  }
+console.log(x);
+}
 // Progression #8: Bonus
 
 const matrix = [
@@ -61,3 +169,16 @@ const matrix = [
   [24, 55, 58, 05, 66, 73, 99, 26, 97, 17],
   [21, 36, 23, 09, 75, 00, 76, 44, 20, 45]
 ];
+function maximumProduct(matrix){
+  var i =0,j=0;
+  var c= 0;
+  
+  for(var  k = 0;k<10;k++)
+  {
+    for(var m = 0;m<10;m+2)
+    {
+    c = c+matrix[m][k]*matrix[m+1][k];
+  }
+    console.log(c);
+}
+}
